@@ -3,11 +3,11 @@ import argparse
 import textwrap
 
 banner = r'''
-      ___      ___  ___ _____ 
-     | _ \_  _| _ \/ _ \_   _|
-     |  _/ || |   / (_) || |  
-     |_|  \_, |_|_\\___/ |_|  
-          |__/                
+        ___      ___  ___ _____ ___ 
+       | _ \_  _| _ \/ _ \_   _/ __|
+       |  _/ || |   / (_) || | \__ \
+       |_|  \_, |_|_\\___/ |_| |___/
+            |__/                                 
 '''
 def rotation(text, rot, decrypt=False, reverse=False):
     rotated = ''
