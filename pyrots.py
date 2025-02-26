@@ -46,14 +46,14 @@ def main():
         parser = argparse.ArgumentParser(
             prog='pyrot-san',
             description='A tool to encrypt and decrypt text using ROT (Caesar cipher) with customizable rotation, reverse direction, and brute-force decryption.',
-            usage='pyrots [MODE] "teks" -rot [angka] [SETTINGS]',
+            usage='pyrots [MODE] "text" -rot [number] [SETTING]',
             epilog='''Example:
                 pyrots -e "HelloWorld" -rot 13 | 
                 pyrots -d "GdkknVnqkc" -rot 13 --reverse | 
                 pyrots -d "GdkknVnqkc" --bruteforce'''
         )
 
-        option = parser.add_argument_group("Mode")
+        option = parser.add_argument_group("Modes")
         group = option.add_mutually_exclusive_group(required=True)
         group.add_argument(
             "-e", "--encrypt",
