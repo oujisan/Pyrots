@@ -1,2 +1,3 @@
 @echo off
-python pyrot.py %*
+set SCRIPT_DIR=%~dp0
+py "%SCRIPT_DIR%pyrots.py" %*
