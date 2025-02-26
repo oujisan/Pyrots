@@ -76,7 +76,7 @@ def main():
         settings_group.add_argument(
             "--reverse",
             action="store_true",
-            help='Reverse rotate direction (Default: right)'
+            help='Reverse rotate direction (Default: right or "→")'
         )
         settings_group.add_argument(
             "--bruteforce",
