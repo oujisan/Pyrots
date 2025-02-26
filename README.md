@@ -34,17 +34,25 @@ pyrots
 pyrots [MODE] "text" -rot [numbers] [SETTING]
 ```
 **OPTIONS:**
+
 `-h`, `--help`       Show help message and exit.
+
 `-rot`, `--rotation` Rotation character. Required for encryption and decryption mode (except --bruteforce and --random)
 
 **MODES:**
+
 `-e`, `--encrypt`    Encrypt plaintext.
+
 `-d`, `--decrypt`    Decrypt ciphertext.
 
 **SETTINGS**
+
 `--reverse`          Reverse rotate direction (Default: right)
+
 `--bruteforce`       List all possible ROT13 and ROT47 decryptions (Requires -d/--decrypt)
+
 `--both`             display decryption in right and left direction of rotation (Requires -d/--decrypt)
+
 `--random`           Choose random rotation and direction for encrypt plaintext (Requires -e/--encrypt)
 
 ## Usage Example
