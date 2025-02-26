@@ -4,7 +4,7 @@ A tool to encrypt and decrypt text using ROT (Caesar cipher) with customizable r
 ## Retricions
 1. CLI (Command Line Interface) only.
 2. Recieve only input text or string type.
-3. Support only between ROT13 and ROT47.
+3. Support in range ROT13 and ROT47.
 
 ## Installation & Usage of script
 1. Download and install python in the Microsoft Store or Official Website [python.org](https://www.python.org/downloads/) (Official website recommended).
