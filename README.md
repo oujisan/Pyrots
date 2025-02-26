@@ -47,7 +47,7 @@ pyrots [MODE] "text" -rot [numbers] [SETTING]
 
 **SETTINGS**
 
-`--reverse`          Reverse rotate direction (Default: right or →)
+`--reverse`          Reverse rotate direction (Default: right or '→')
 
 `--bruteforce`       List all possible ROT13 and ROT47 decryptions (Requires -d/--decrypt)
 
