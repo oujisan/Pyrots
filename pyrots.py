@@ -57,10 +57,22 @@ def main():
             type=str,
             help="Text to be rotated"
         )
-        parser.add_argument(
+
+        options_group = parser.add_mutually_exclusive_group(required=True)
+        options_group.add_argument(
             "-rot", "--rotation",
             type=int,
             help='Rotation character. Required for encryption and reverse mode'
+        )
+        options_group.add_argument(
+            "--bruteforce",
+            action="store_true",
+            help='List all possible ROT13 and ROT47 decryptions (Requires -d/--decrypt)'
+        )
+        options_group.add_argument(
+            "--random",
+            action="store_true",
+            help='Choose random rotation and direction for encrypt plaintext (Requires -e/--encrypt)'
         )
 
         settings = parser.add_argument_group("Settings")
@@ -71,19 +83,9 @@ def main():
             help='Reverse rotate direction (Default: right or "→")'
         )
         settings_group.add_argument(
-            "--bruteforce",
-            action="store_true",
-            help='List all possible ROT13 and ROT47 decryptions (Requires -d/--decrypt)'
-        )
-        settings_group.add_argument(
             "--both",
             action="store_true",
             help='display decryption in right and left direction of rotation (Requires -d/--decrypt)'
-        )
-        settings_group.add_argument(
-            "--random",
-            action="store_true",
-            help='Choose random rotation and direction for encrypt plaintext (Requires -e/--encrypt)'
         )
 
         if len(sys.argv) == 1:
@@ -97,9 +99,9 @@ def main():
             parser.error("--reverse requires --rotation")
             raise SystemExit
         if args.random and (args.rotation or args.reverse):
-            parser.error("--rotation cannot be used with --random")
+            parser.error("--random cannot be used with --rotation, --both or --reverse")
             raise SystemExit
-        if args.bruteforce and (args.rotation or args.reverse or args.both or args.random):
+        if args.bruteforce and (args.reverse or args.both or args.random):
             parser.error("--bruteforce cannot be used with --reverse, --rotation or --both")
             raise SystemExit
         if args.both and args.reverse:
@@ -107,10 +109,17 @@ def main():
             raise SystemExit
 
         if args.text:
-            if args.rotation:                 
-                switch = True if args.reverse else False
-                rotated = rotation(text=args.text, rot=args.rotation, reverse=switch)
-                print(rotated)
+            if args.bruteforce:
+                bruteforce(args.text)
+
+            if args.rotation:
+                if args.both:
+                    print(f'ROT-{args.rotation:02} → = {rotation(text=args.text, rot=args.rotation, reverse=False)}')
+                    print(f'{' '*7}← = {rotation(text=args.text, rot=args.rotation, reverse=True)}')    
+                else:             
+                    switch = True if args.reverse else False
+                    rotated = rotation(text=args.text, rot=args.rotation, reverse=switch)
+                    print(rotated)
             elif args.random:
                 while True:
                     rand = random.randint(1,127)
@@ -122,20 +131,6 @@ def main():
                 print(f'Direction = {'left' if direction == 1 else 'Right'}')
             else:
                 parser.error("Text requires -rot / --rotation. Try --random to random the rotation and direction")
-                raise SystemExit
-
-            if args.bruteforce:
-                bruteforce(args.text)
-            elif args.rotation:
-                if args.both:
-                    print(f'ROT-{args.rotation:02} → = {rotation(text=args.text, rot=args.rotation, reverse=False)}')
-                    print(f'{' '*7}← = {rotation(text=args.text, rot=args.rotation, reverse=True)}')
-                else:
-                    reverse = True if args.reverse else False
-                    rotated = rotation(text=args.text, rot=args.rotation, reverse=reverse)
-                    print(rotated)
-            else:
-                parser.error("Text requires -rot / --rotation. Try --bruteforce to show all possible decryptions")
                 raise SystemExit
 
     except SystemExit:
