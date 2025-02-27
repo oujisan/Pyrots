@@ -1,5 +1,5 @@
 # Pyrots (Python ROT)
-A tool to encrypt and decrypt text using ROT (Caesar cipher) with customizable rotation, reverse direction, and brute-force decryption. This script can do random rotation and direction encryption of plaintext.
+A tool to rotate plaintext or ciphertext using ROT (Caesar cipher) with customizable rotation, reverse direction (default right), and brute-force decryption. This script can do random rotation and direction encryption of plaintext.
 
 ## Retricions
 1. CLI (Command Line Interface) only.
@@ -31,52 +31,49 @@ pyrots
 ## Argument Documentation
 **USAGE:** 
 ```
-pyrots [MODE] "text" -rot [numbers] [SETTING]
+pyrots "text" -rot [numbers] [SETTING]
 ```
 **OPTIONS:**
 
 `-h`, `--help`       Show help message and exit.
 
-`-rot`, `--rotation` Rotation character. Required for encryption and decryption mode (except --bruteforce and --random)
+`-rot`, `--rotation` Rotation character. Required for rotate text (except --random)
 
-**MODES:**
-
-`-e`, `--encrypt`    Encrypt plaintext.
-
-`-d`, `--decrypt`    Decrypt ciphertext.
 
 **SETTINGS**
 
 `--reverse`          Reverse rotate direction (Default: right or '→')
 
-`--bruteforce`       List all possible ROT13 and ROT47 decryptions (Requires -d/--decrypt)
+`--bruteforce`       List all possible ROT13 and ROT47 decryptions
 
-`--both`             display decryption in right and left direction of rotation (Requires -d/--decrypt)
+`--both`             display decryption in right and left direction of rotation
 
-`--random`           Choose random rotation and direction for encrypt plaintext (Requires -e/--encrypt)
+`--random`           Choose random rotation and direction for rotate plaintext
 
 ## Usage Example
-Encrypt plaintext with reverse direction
+rotate plaintext or ciphertext
 ```
-pyrots -e "HelloWorld" -rot 13
-```
-
-Encrypt plaintext with random
-```
-pyrots -e "HelloWorld" --random
+pyrots "HelloWorld" -rot 13
 ```
 
-Decrypt ciphertext with reverse direction or with both direction
+rotate plaintext or ciphertext with reverse
 ```
-pyrtos -d "AxeehPhkew" -rot 19 --reverse
-```
-```
-pyrtos -d "AxeehPhkew" -rot 19 --both
+pyrtos "Helloworld" -rot 13 --reverse
 ```
 
-Decrypt ciphertext with bruteforce
+rotate plaintext with random rotate and direction
 ```
-pyrots -d "AxeehPhkew" --bruteforce
+pyrots "HelloWorld" --random
+```
+
+rotate ciphertext with both direction
+```
+pyrtos "AxeehPhkew" -rot 19 --both
+```
+
+rotate ciphertext with bruteforce
+```
+pyrots "AxeehPhkew" --bruteforce
 ```
 
 ## Build-In
