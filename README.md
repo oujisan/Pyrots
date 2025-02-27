@@ -28,6 +28,11 @@ install.bat
 pyrots
 ```
 
+If there's error while run install script or want to run in android device, run `pyrots.py` with python manually and make sure in path of script.
+```
+python pyrots.py
+```
+
 ## Argument Documentation
 **USAGE:** 
 ```
@@ -39,16 +44,16 @@ pyrots "text" -rot [numbers] [SETTING]
 
 `-rot`, `--rotation` Rotation character. Required for rotate text (except --random)
 
+`--random`           Choose random rotation and direction for rotate plaintext
+
+`--bruteforce`       List all possible ROT13 and ROT47 decryptions
 
 **SETTINGS**
 
 `--reverse`          Reverse rotate direction (Default: right or '→')
 
-`--bruteforce`       List all possible ROT13 and ROT47 decryptions
-
 `--both`             display decryption in right and left direction of rotation
 
-`--random`           Choose random rotation and direction for rotate plaintext
 
 ## Usage Example
 rotate plaintext or ciphertext
