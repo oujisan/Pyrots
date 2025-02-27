@@ -15,10 +15,7 @@ git clone https://github.com/oujisan/Pyrots.git
 3. Open terminal or CMD, make sure you're in path of PyROTS before run installation. Installation script will auto add PyROTS to PATH so, you can running it in easy way.
 
 4. Run Installation based your Operation System.
-- If you use Windows OS, run `install.bat`.
-```
-install.bat
-```
+- If you use Windows OS, open `sysdm.cpl` to add folder path pyrots to PATH in Environtment Variables.
 - If use Linux or MacOS OS, run `install.sh`. Make sure file has execute permission.
 ```
 ./install.sh
