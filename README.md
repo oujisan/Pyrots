@@ -1,10 +1,11 @@
-# Pyrots (Python ROT)
+# ROTen (ROTATION-n)
 A tool to rotate plaintext or ciphertext using ROT (Caesar cipher) with customizable rotation, reverse direction (default right), and brute-force ciphertext. This script can do random rotation and direction of plaintext.
 
-## Retricions
-1. CLI (Command Line Interface) only.
-2. Recieve only input text or string type.
-3. Support in range ROT13 and ROT47.
+## Features
+1. Rotate text with custom rotation and direction.
+2. Random rotation and direction mode.
+3. Bruteforce possible text rotation and direction.
+4. Support in range ROT13 and ROT47.
 
 ## Installation & Usage of script
 1. Download and install python in the Microsoft Store or Official Website [python.org](https://www.python.org/downloads/) (Official website recommended).
