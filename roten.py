@@ -2,7 +2,6 @@
 
 import sys
 import argparse
-import textwrap
 import random
 
 banner = r'''
