@@ -23,7 +23,7 @@ A tool to rotate plaintext or ciphertext using ROT (Caesar cipher) with customiz
 
      Example:
      ```
-     C:/Users/oujisan/ROTen/
+     C:\Users\oujisan\ROTen
      ```
 
    - **Linux/macOS**: Ensure the `install.sh` script has execute permissions and run it:
