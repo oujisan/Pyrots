@@ -1,5 +1,5 @@
-# Pyrots (Python ROT)
-A tool to rotate plaintext or ciphertext using ROT (Caesar cipher) with customizable rotation, reverse direction (default right), and brute-force decryption. This script can do random rotation and direction encryption of plaintext.
+# ROTen (ROTATION-N)
+A tool to rotate plaintext or ciphertext using ROT (Caesar cipher) with customizable rotation, reverse direction (default right), and brute-force decryption. This script can do random rotation and direction of plaintext.
 
 ## Retricions
 1. CLI (Command Line Interface) only.
@@ -10,30 +10,30 @@ A tool to rotate plaintext or ciphertext using ROT (Caesar cipher) with customiz
 1. Download and install python in the Microsoft Store or Official Website [python.org](https://www.python.org/downloads/) (Official website recommended).
 2. Copy repository to local directory
 ```
-git clone https://github.com/oujisan/Pyrots.git
+git clone https://github.com/oujisan/ROTen.git
 ```
-3. Open terminal or CMD, make sure you're in path of PyROTS before run installation. Installation script will auto add PyROTS to PATH so, you can running it in easy way.
+3. Open terminal or CMD, make sure you're in path of ROTen before run installation. Installation script will auto add ROTen to PATH so, you can running it in easy way.
 
 4. Run Installation based your Operation System.
-- If you use Windows OS, open `sysdm.cpl` to add folder path pyrots to PATH in Environtment Variables.
+- If you use Windows OS, open `sysdm.cpl` to add folder path ROTen to PATH in Environtment Variables.
 - If use Linux or MacOS OS, run `install.sh`. Make sure file has execute permission.
 ```
 ./install.sh
 ```
-5. Congratulations!!! Now you can run PyROTS globally in terminal or cmd. Run `pyrots` to check it.
+5. Congratulations!!! Now you can run ROTen globally in terminal or cmd. Run `roten` to check it.
 ```
-pyrots
+roten
 ```
 
-If there's error while run install script or want to run in android device, run `pyrots.py` with python manually and make sure in path of script.
+If there's error while run install script or want to run in android device, run `roten.py` with python manually and make sure in path of script.
 ```
-python pyrots.py
+python roten.py
 ```
 
 ## Argument Documentation
 **USAGE:** 
 ```
-pyrots "text" -rot [numbers] [SETTING]
+roten "text" -rot [numbers] [SETTING]
 ```
 **OPTIONS:**
 
@@ -55,7 +55,7 @@ pyrots "text" -rot [numbers] [SETTING]
 ## Usage Example
 rotate plaintext or ciphertext
 ```
-pyrots "HelloWorld" -rot 13
+roten "HelloWorld" -rot 13
 ```
 
 rotate plaintext or ciphertext with reverse
@@ -65,7 +65,7 @@ pyrtos "Helloworld" -rot 13 --reverse
 
 rotate plaintext with random rotate and direction
 ```
-pyrots "HelloWorld" --random
+roten "HelloWorld" --random
 ```
 
 rotate ciphertext with both direction
@@ -75,7 +75,7 @@ pyrtos "AxeehPhkew" -rot 19 --both
 
 rotate ciphertext with bruteforce
 ```
-pyrots "AxeehPhkew" --bruteforce
+roten "AxeehPhkew" --bruteforce
 ```
 
 ## Build-In

@@ -1,5 +1,5 @@
 #!/bin/bash
-chmod +x ./pyrots.py
-sudo cp pyrots.py /usr/local/bin/pyrots
-sudo sed -i 's/\r$//' "/usr//local/bin/pyrots"
-echo "PyROTS has been successfully installed! You can run it using: pyrots"
+chmod +x ./roten.py
+sudo cp roten.py /usr/local/bin/roten
+sudo sed -i 's/\r$//' "/usr//local/bin/roten"
+echo "ROTen has been successfully installed! You can run it using: roten"

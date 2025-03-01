@@ -6,12 +6,11 @@ import textwrap
 import random
 
 banner = r'''
-     ___      ___  ___ _____ ___ 
-    | _ \_  _| _ \/ _ \_   _/ __|
-    |  _/ || |   / (_) || | \__ \
-    |_|  \_, |_|_\\___/ |_| |___/
-        |__/                                 
-
+  ___  ___ _____         
+ | _ \/ _ \_   _|__ _ _  
+ |   / (_) || |/ -_) ' \ 
+ |_|_\\___/ |_|\___|_||_|
+                         
 by: oujisan
 '''
 def rotation(text, rot, reverse=False):
@@ -44,13 +43,13 @@ def bruteforce(text):
 def main():
     try:
         parser = argparse.ArgumentParser(
-            prog='pyrot-san',
+            prog='ROTen',
             description='A tool to encrypt and decrypt text using ROT (Caesar cipher) with customizable rotation, reverse direction, and brute-force decryption.',
-            usage='pyrots "text" -rot [number] [SETTING]',
+            usage='roten "text" -rot [number] [SETTING]',
             epilog='''Example:
-                pyrots "HelloWorld" -rot 13 | 
-                pyrots "GdkknVnqkc" -rot 13 --reverse | 
-                pyrots "GdkknVnqkc" --bruteforce'''
+                roten "HelloWorld" -rot 13 | 
+                roten "GdkknVnqkc" -rot 13 --reverse | 
+                roten "GdkknVnqkc" --bruteforce'''
         )
         parser.add_argument(
             "text",
