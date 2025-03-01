@@ -19,12 +19,17 @@ A tool to rotate plaintext or ciphertext using ROT (Caesar cipher) with customiz
 
 4. 🛠️ Run the installation script based on your operating system:
 
-   - **Windows**: Open run or `win + r` write `sysdm.cpl` and manually add the **ROTen** folder in  Advanced -> **Environment Variables** under **PATH**.
+   - **Windows**: Open run or `win + r` write `sysdm.cpl` and manually add the **ROTen** folder's path in  Advanced -> **Environment Variables** under **PATH**. 
+
+     Example:
+     ```
+     C:/Users/oujisan/ROTen/
+     ```
 
    - **Linux/macOS**: Ensure the `install.sh` script has execute permissions and run it:
-   ```bash
-   ./install.sh
-   ```
+      ```bash
+      ./install.sh
+      ```
 
 5. 🎉 Congratulations! You can now use **ROTen** globally. Check if the installation is successful by running:
    ```bash
