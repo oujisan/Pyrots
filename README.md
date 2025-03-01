@@ -1,5 +1,5 @@
-# ROTen (ROTATION-N)
-A tool to rotate plaintext or ciphertext using ROT (Caesar cipher) with customizable rotation, reverse direction (default right), and brute-force decryption. This script can do random rotation and direction of plaintext.
+# Pyrots (Python ROT)
+A tool to rotate plaintext or ciphertext using ROT (Caesar cipher) with customizable rotation, reverse direction (default right), and brute-force ciphertext. This script can do random rotation and direction of plaintext.
 
 ## Retricions
 1. CLI (Command Line Interface) only.
