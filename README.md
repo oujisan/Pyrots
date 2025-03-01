@@ -1,85 +1,95 @@
-# ROTen (ROTATION-n)
-A tool to rotate plaintext or ciphertext using ROT (Caesar cipher) with customizable rotation, reverse direction (default right), and brute-force ciphertext. This script can do random rotation and direction of plaintext.
+# 🔄 **ROTen (ROTATION-n)**
+A tool to rotate plaintext or ciphertext using ROT (Caesar cipher) with customizable rotation, reverse direction (default right), and brute-force ciphertext. This script can perform random rotation and direction of plaintext.
 
-## Features
-1. Rotate text with custom rotation and direction.
-2. Random rotation and direction mode.
-3. Bruteforce possible text rotation and direction.
-4. Support in range ROT13 and ROT47.
+## ✨ **Features**
+✅ Rotate text with custom rotation and direction.  
+✅ Random rotation and direction mode.  
+✅ Brute-force possible text rotation and direction.  
+✅ Support in range **ROT13** and **ROT47**.  
 
-## Installation & Usage of script
-1. Download and install python in the Microsoft Store or Official Website [python.org](https://www.python.org/downloads/) (Official website recommended).
-2. Copy repository to local directory
-```
-git clone https://github.com/oujisan/ROTen.git
-```
-3. Open terminal or CMD, make sure you're in path of ROTen before run installation. Installation script will auto add ROTen to PATH so, you can running it in easy way.
+## 📥 **Installation & Usage of script**
+1. 🐍 Download and install Python from the Microsoft Store or the official website [python.org](https://www.python.org/downloads/) (official website recommended).
 
-4. Run Installation based your Operation System.
-- If you use Windows OS, open `sysdm.cpl` to add folder path ROTen to PATH in Environtment Variables.
-- If use Linux or MacOS OS, run `install.sh`. Make sure file has execute permission.
-```
-./install.sh
-```
-5. Congratulations!!! Now you can run ROTen globally in terminal or cmd. Run `roten` to check it.
-```
-roten
-```
+2. 📂 Clone the repository to your local directory:
+   ```bash
+   git clone https://github.com/oujisan/ROTen.git
+   ```
 
-If there's error while run install script or want to run in android device, run `roten.py` with python manually and make sure in path of script.
-```
+3. 📌 Open your terminal (or CMD on Windows) and navigate to the **ROTen** directory. The installation script will automatically add **ROTen** to your system's **PATH** for easy global access.
+
+4. 🛠️ Run the installation script based on your operating system:
+
+   - **Windows**: Open `sysdm.cpl` and manually add the **ROTen** folder to **Environment Variables** under **PATH**.
+
+   - **Linux/macOS**: Ensure the `install.sh` script has execute permissions and run it:
+   ```bash
+   ./install.sh
+   ```
+
+5. 🎉 Congratulations! You can now use **ROTen** globally. Check if the installation is successful by running:
+   ```bash
+   roten
+   ```
+
+💡 If there's an error during installation, or if you want to run it on Android, execute the script manually with Python:
+```bash
 python roten.py
 ```
 
-## Argument Documentation
-**USAGE:** 
-```
+## 📚 **Argument Documentation**
+
+### 📌 **USAGE:**
+```bash
 roten "text" -rot [numbers] [SETTING]
 ```
-**OPTIONS:**
 
-`-h`, `--help`       Show help message and exit.
+### ⚙️ **OPTIONS:**
 
-`-rot`, `--rotation` Rotation character. Required for rotate text (except --random)
+| Option            | Description                                      |
+|-------------------|--------------------------------------------------|
+| `-h`, `--help`    | Show help message and exit.                      |
+| `-rot`, `--rotation` | Specify rotation value (required except for `--random`). |
+| `--random`        | Use a random rotation value and direction.        |
+| `--bruteforce`    | Display all possible decryptions (ROT13 & ROT47). |
 
-`--random`           Choose random rotation and direction for rotate plaintext
+### 🔧 **SETTINGS:**
 
-`--bruteforce`       List all possible ROT13 and ROT47 decryptions
+| Setting           | Description                                      |
+|-------------------|--------------------------------------------------|
+| `--reverse`       | Reverse the rotation direction (Default: Right →).|
+| `--both`          | Show decryptions in both right and left directions.|
 
-**SETTINGS**
+## 📊 **Usage Examples**
 
-`--reverse`          Reverse rotate direction (Default: right or '→')
-
-`--both`             display decryption in right and left direction of rotation
-
-
-## Usage Example
-rotate plaintext or ciphertext
-```
+👉 **Rotate plaintext or ciphertext:**
+```bash
 roten "HelloWorld" -rot 13
 ```
 
-rotate plaintext or ciphertext with reverse
-```
-pyrtos "Helloworld" -rot 13 --reverse
+👉 **Rotate with reverse direction:**
+```bash
+roten "HelloWorld" -rot 13 --reverse
 ```
 
-rotate plaintext with random rotate and direction
-```
+👉 **Rotate with random rotation and direction:**
+```bash
 roten "HelloWorld" --random
 ```
 
-rotate ciphertext with both direction
-```
-pyrtos "AxeehPhkew" -rot 19 --both
+👉 **Rotate and show both directions:**
+```bash
+roten "AxeehPhkew" -rot 19 --both
 ```
 
-rotate ciphertext with bruteforce
-```
+👉 **Brute-force ciphertext (ROT13 & ROT47):**
+```bash
 roten "AxeehPhkew" --bruteforce
 ```
 
-## Build-In
-Python 3.13.1
+## 🧰 **Build-In**
+- Python **3.13.1**
 
-**Created date:** Wednesday, February 26 2025
+📅 **Created Date:** Wednesday, February 26, 2025
+
+🚀 **Happy Rotating!**
+
